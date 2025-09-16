@@ -1,0 +1,69 @@
+:root{
+  --max-width: 720px;
+  --accent: #0b5fff;
+  --muted: #666;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  padding:24px;
+  display:flex;
+  justify-content:center;
+  background:#f7f8fb;
+  color:#111;
+}
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  background:#fff;
+  border-radius:12px;
+  box-shadow: 0 6px 24px rgba(20,20,40,0.06);
+  padding:20px;
+}
+
+/* responsive grid: forms stack on narrow screens */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+.brand{ font-size:1.1rem; font-weight:700; color:var(--accent); }
+.nav a{ margin-right:12px; text-decoration:none; color:var(--muted); }
+form{ margin-top:8px; }
+.input{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  margin-bottom:8px;
+}
+.btn{
+  padding:10px 14px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+  background:var(--accent);
+  color:#fff;
+  font-weight:600;
+}
+.btn-ghost{
+  background:transparent;
+  border:1px solid #e6e9ef;
+  color:var(--muted);
+}
+.message{ color:#c0392b; margin-bottom:8px; }
+
+/* welcome */
+.greeting{ font-size:1.4rem; margin-bottom:8px; }
+
+/* pre for armazenamento */
+pre{ background:#f4f6fb; padding:12px; border-radius:8px; overflow:auto; max-height:60vh; }
+@media (max-width:520px){
+  body{ padding:12px; }
+  .container{ padding:14px; }
+  .header{ flex-direction:column; align-items:flex-start; gap:6px; }
+}
